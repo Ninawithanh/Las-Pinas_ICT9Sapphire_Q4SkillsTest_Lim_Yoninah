@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q4 Seatwork 1 </title>
+
+    <style>
+        .yes {
+            font-family: Gill Sans MT;
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 25px;
+            background-color: rgb(116, 175, 127);
+            border-radius: 15px;
+            border: solid 2px rgb(90, 131, 97);}
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            border: solid 1px ;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body style="background-color:rgb(197, 255, 208);">
+
+<div class="yes">
+
+    <form onsubmit="authenticate()">
+        <h1 style="background-color: rgb(160, 235, 174); border-radius: 10px; padding: 10px;"> Login Form </h1>
+
+        <label> Username: </label>
+
+        <br>
+        <input type="text" id="uname" placeholder="Enter Username" required>
+        <br>
+        <br>
+        <label> Password: </label>
+        <br>
+        <input type="password" id="pass" placeholder="Enter Password" minlength="8" required>
+        <br>
+        <br>
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="checked">
+        <label class="form-check-label" for="check1"> Stay logged in </label>
+        <br>
+        <br>
+        <button type="button" href="dashboard.html" class="btn-login">Login</button> 
+        <br>
+        <br>
+        <a href="#"> Forgot username / password ? </a>
+
+    </form>
+
+</div>
+
+    <script>
+        
+        function authenticate(){
+            var sapphire1 = document.getElementById('uname').value;
+            var sapphire2 = document.getElementById('pass').value;
+            let attempts = 0;
+            
+            if (attempts <= 3) {
+                if (sapphire1 === 'Ninawithanh' && sapphire2 === 'ILikeChezburger!') {
+                alert("You are logged in!");
+
+                }else {
+                alert("Incorrect username or password");
+                attempts += 1
+                }
+            } else {
+                alert("Too many attempts!");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
